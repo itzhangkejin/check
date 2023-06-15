@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('./fonts/icomoon.eot?2bv1gq');
+    src:  url('./fonts/icomoon.eot?2bv1gq#iefix') format('embedded-opentype'),
+      url('./fonts/icomoon.ttf?2bv1gq') format('truetype'),
+      url('./fonts/icomoon.woff?2bv1gq') format('woff'),
+      url('./fonts/icomoon.svg?2bv1gq#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #efefee;
+}
+.bgBox{
+    position: relative;
+    margin: 150px auto;
+    width: 340px;
+    height: 270px;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 20px 20px;
+    overflow: hidden;
+    // 刷新
+    .reset::after{
+        position: absolute;
+        right: 20px;
+        top: 22px;
+        width: 30px;
+        height: 30px;
+        content: '\f0e2';
+        font-family: 'icomoon';
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        opacity: .8;
+        cursor: pointer;
+        z-index: 999999;
+    }
+
+    .canvas{
+        z-index: 0;
+        border: 1px solid #eee;
+    }
+    .mask{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 999;
+    }
+    .white_mask{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+    .slide{
+        position: absolute;
+        left: 20px;
+        bottom: 30px;
+        width: 300px;
+        height: 40px;
+        border: 1px solid #eee;
+    }
+    .silde_Text{
+        position: absolute;
+        left: 20px;
+        bottom: 30px;
+        width: 300px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        color: rgb(110, 104, 104);
+    }
+    .silde_box{
+        position: absolute;
+        left: 20px;
+        bottom: 30px;
+        width: 50px;
+        height: 40px;
+        border: 1px solid #efefee;
+        cursor:move ;
+        z-index: 1;
+    }
+    .silde_box::after{
+        content: '\f101';
+        font-family: 'icomoon';
+        font-size: 30px;
+        margin-left: 15px;
+        line-height: 35px;
+        color: rgb(96, 89, 89);
+    }
+    .silde_success::after{
+        content: '\f00c';
+        font-family: 'icomoon';
+        font-size: 30px;
+        margin-left: 12px;
+        line-height: 35px;
+        color: rgb(255, 255, 255);
+    }
+    .silde_fail::after{
+        content: '\f00d';
+        font-family: 'icomoon';
+        font-size: 30px;
+        margin-left: 12px;
+        line-height: 35px;
+        color: rgb(255, 8, 0);
+    }
+    .active_silde_box{
+        background-color: rgb(106, 158, 232);
+        border: 1px solid rgb(106, 158, 232);
+    }
+    .slide_t{
+        position: absolute;
+        left: 20px;
+        bottom: 30px;
+        width: 0px;
+        height: 40px;
+        box-sizing: border-box;
+    }
+    .active_slide_t{
+        background-color: rgb(144, 210, 234);
+        border: 1px solid rgb(54, 126, 234);
+    }
+
+}

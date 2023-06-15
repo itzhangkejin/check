@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?2bv1gq');
+  src: url('fonts/icomoon.eot?2bv1gq#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?2bv1gq') format('truetype'), url('fonts/icomoon.woff?2bv1gq') format('woff'), url('fonts/icomoon.svg?2bv1gq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #efefee;
+}
+.bgBox {
+  position: relative;
+  margin: 150px auto;
+  width: 340px;
+  height: 270px;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 20px 20px;
+  overflow: hidden;
+}
+.bgBox .reset::after {
+  position: absolute;
+  right: 20px;
+  top: 22px;
+  width: 30px;
+  height: 30px;
+  content: '\f0e2';
+  font-family: 'icomoon';
+  text-align: center;
+  color: #ffffff;
+  font-size: 30px;
+  opacity: 0.8;
+  cursor: pointer;
+  z-index: 999999;
+}
+.bgBox .canvas {
+  z-index: 0;
+  border: 1px solid #eee;
+}
+.bgBox .mask {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+}
+.bgBox .white_mask {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.bgBox .slide {
+  position: absolute;
+  left: 20px;
+  bottom: 30px;
+  width: 300px;
+  height: 40px;
+  border: 1px solid #eee;
+}
+.bgBox .silde_Text {
+  position: absolute;
+  left: 20px;
+  bottom: 30px;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #6e6868;
+  user-select: none;
+}
+.bgBox .silde_box {
+  position: absolute;
+  left: 20px;
+  bottom: 30px;
+  width: 50px;
+  height: 40px;
+  border: 1px solid #efefee;
+  cursor: move ;
+  z-index: 1;
+}
+.bgBox .silde_box::after {
+  content: '\f101';
+  font-family: 'icomoon';
+  font-size: 30px;
+  margin-left: 15px;
+  line-height: 35px;
+  color: #605959;
+}
+.bgBox .silde_success::after {
+  content: '\f00c';
+  font-family: 'icomoon';
+  font-size: 30px;
+  margin-left: 12px;
+  line-height: 35px;
+  color: #ffffff;
+}
+.bgBox .silde_fail::after {
+  content: '\f00d';
+  font-family: 'icomoon';
+  font-size: 30px;
+  margin-left: 12px;
+  line-height: 35px;
+  color: #ff0800;
+}
+.bgBox .active_silde_box {
+  background-color: #6a9ee8;
+  border: 1px solid #6a9ee8;
+}
+.bgBox .slide_t {
+  position: absolute;
+  left: 20px;
+  bottom: 30px;
+  width: 0px;
+  height: 40px;
+  box-sizing: border-box;
+}
+.bgBox .active_slide_t {
+  background-color: #90d2ea;
+  border: 1px solid #367eea;
+}
